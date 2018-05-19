@@ -78,7 +78,7 @@
           <%= form_for Pledge.new, method: :post do |f| %>
             <%= f.hidden_field :wishlist_item_id, value: wishlist_item.id %>
             <%= f.hidden_field :user_id, value: current_user.id %>
-            <%= f.submit "Pledge to Donate", class:"btn btn-primary", 'data-amazon-url': wishlist_item.amazon_url %>
+            <%= f.submit "Pledge to Donate", class:"btn btn-primary", 'data-amazon-url': wishlist_item.amazon_url, formtarget: '_blank' %>
           <% end %>
           <small id="pledge-help" class="form-text text-muted">
             (will open new <%= icon 'amazon' %> tab)
